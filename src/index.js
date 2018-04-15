@@ -18,6 +18,7 @@ const rgbaNova = Object.keys(nova.ansiGroups).reduce((result, key) => {
   result[key] = mapOfRGB
   return result
 }, {})
+rgbaNova.background = hexToRGB('#212B30');
 
 Handlebars.registerPartial('color',
   fs.readFileSync('src/color.handlebars').toString())
